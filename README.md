@@ -25,3 +25,6 @@ JDBC를 이용해 mysql을 접근하기위한 라이브러리 설치 : *mysql-co
 2) mysql-connector-java-버전-bin.jar' 라이브러리 안드로이드에 추가 Project->app->libs에 복사  
 
 
+### 주의사항
+1. 안드로이드 패키지와 자바 패키지의 이름을 동일하게 해줘야 함 : ClassNotFoundException
+2. 안드로이드 - 자바 주고받을 객체에 Serializable 인터페이스를 implements하고 SerialversionUID를 선언해주어야함 :InvalidClassException
