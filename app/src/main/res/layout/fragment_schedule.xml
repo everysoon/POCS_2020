@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:stretchColumns="*">
+
+        <TableRow android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/custom_surgery_Row1"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:hint="오늘"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/custom_surgery_Row2"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:hint="내일"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/custom_surgery_Row3"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:hint="모레"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorSoon2"></View>
+
+        <TableRow android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:text="9"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSoon2"
+                    android:textColorHint="@color/colorSoon2"
+                    android:textSize="28dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorSoon2"></View>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/today_9"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tomorrow_9"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/later_9"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:text="10"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSoon2"
+                    android:textColorHint="@color/colorSoon2"
+                    android:textSize="28dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorSoon2"></View>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/today_10"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tomorrow_10"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/later_10"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:text="11"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSoon2"
+                    android:textColorHint="@color/colorSoon2"
+                    android:textSize="28dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorSoon2"></View>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/today_11"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tomorrow_11"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/later_11"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:text="12"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSoon2"
+                    android:textColorHint="@color/colorSoon2"
+                    android:textSize="28dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorSoon2"></View>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/today_12"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tomorrow_12"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/later_12"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:text="13"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSoon2"
+                    android:textColorHint="@color/colorSoon2"
+                    android:textSize="28dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorSoon2"></View>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/today_13"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tomorrow_13"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/later_13"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:text="14"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSoon2"
+                    android:textColorHint="@color/colorSoon2"
+                    android:textSize="28dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorSoon2"></View>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/today_14"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tomorrow_14"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/later_14"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:text="15"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSoon2"
+                    android:textColorHint="@color/colorSoon2"
+                    android:textSize="28dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorSoon2"></View>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/today_15"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tomorrow_15"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/later_15"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:text="16"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSoon2"
+                    android:textColorHint="@color/colorSoon2"
+                    android:textSize="28dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorSoon2"></View>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/today_16"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tomorrow_16"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/later_16"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:text="17"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSoon2"
+                    android:textColorHint="@color/colorSoon2"
+                    android:textSize="28dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorSoon2"></View>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/today_17"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tomorrow_17"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/later_17"
+
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+
+    </TableLayout>
+</LinearLayout>

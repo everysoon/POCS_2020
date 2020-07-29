@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/strokebuttonwhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+
+        <TextView
+            android:id="@+id/pharmacy_prescription_item_medicineName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="약이름"
+            android:layout_gravity="center"
+            android:paddingLeft="80dp"
+            android:paddingRight="80dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorSoon3"
+            android:textColorHint="@color/colorSoon3"
+            android:textSize="32dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginLeft="30dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/pharmacy_prescription_item_tablet"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:hint="T"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="T"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/pharmacy_prescription_item_divided"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:hint="#"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="#"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/pharmacy_prescription_item_day"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:hint="Day"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Day"
+                android:textAlignment="center"
+                android:textColor="@color/colorSoon2"
+                android:textColorHint="@color/colorSoon2"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+

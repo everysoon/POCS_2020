@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#b0ecff</color>
+    <color name="colorPrimaryDark">#007aa1</color>
+    <color name="colorAccent">#e2e2e2</color>
+    <color name="colorSoon1">#aad047</color>
+    <color name="colorSoon2">#007a85</color>
+    <color name="colorSoon3">#1bbcf0</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray">#696969</color>
+    <color name="brightgray">#b0b0b0</color>
+    <color name="soonDark">#005c64</color>
+    <color name="highlight">#26ffcc00</color>
+</resources>
