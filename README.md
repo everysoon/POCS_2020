@@ -2,7 +2,7 @@
 : 안드로이드를 이용한 휴대용 miniOCS 시스템
 
 ## 개발환경 : Android 29 / MYSQL 5.6 
-(mysql-connector-java-5.1.39-bin.jar 라이브러리 사용)
+(mysql-connector-java-5.1.39-bin.jar 라이브러리 사용)  
 사용안드로이드 기기 : LG 10.1 Tablet 
 ### 1. 설치
 mysql 설치 : https://dev.mysql.com/downloads/mysql/  
