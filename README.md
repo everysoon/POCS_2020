@@ -3,7 +3,7 @@
 
 ## 개발환경 : Android 29 / MYSQL 5.6 
 (mysql-connector-java-5.1.39-bin.jar 라이브러리 사용)
-
+사용안드로이드 기기 : LG 10.1 Tablet 
 ### 1. 설치
 mysql 설치 : https://dev.mysql.com/downloads/mysql/  
 JDBC를 이용해 mysql을 접근하기위한 라이브러리 설치 : *mysql-connector-java-버전-bin.jar*로 준비!
