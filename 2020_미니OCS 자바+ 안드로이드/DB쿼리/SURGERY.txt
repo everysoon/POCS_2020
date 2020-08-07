@@ -1,0 +1,15 @@
+CREATE TABLE `surgery` (
+`surgery_id` INT PRIMARY KEY NOT NULL auto_increment,
+`registration_id` INT,
+FOREIGN KEY(registration_id) REFERENCES registration(registration_id)
+ON DELETE CASCADE ON UPDATE CASCADE,
+`sysmptom_name` VARCHAR(30),
+`sysmptom_opinion` VARCHAR(150),
+`reserve_time` VARCHAR(15),
+`surgery_duration` ??
+`surgery_start_time` ??
+`surgery_duration` ??
+`surgery_doc_id` INT,
+FOREIGN KEY(surgery_doc_id) REFERENCES doctor(doctor_id)
+ON DELETE CASCADE ON UPDATE CASCADE
+);

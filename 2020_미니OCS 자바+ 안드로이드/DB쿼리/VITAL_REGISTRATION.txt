@@ -1,0 +1,10 @@
+CREATE TABLE `vital_registration` (
+`vital_registration_id` INT PRIMARY KEY NOT NULL auto_increment,
+`registration_id` INT,
+FOREIGN KEY(registration_id) REFERENCES registration(registration_id)
+ON DELETE CASCADE ON UPDATE CASCADE,
+`vital_id` INT,  FOREIGN KEY(vital_id) REFERENCES vital(vital_id)
+ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+INSERT INTO vital_registration VALUES (1,1,1);

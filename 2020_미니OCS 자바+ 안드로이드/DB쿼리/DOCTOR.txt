@@ -1,0 +1,14 @@
+CREATE TABLE `doctor`(
+`doctor_id` INT(2) PRIMARY KEY auto_increment,
+`doctor_name` VARCHAR(4),
+`dept_id` INT(2),
+FOREIGN KEY(`dept_id`) REFERENCES department(`dept_id`) 
+ON DELETE CASCADE ON UPDATE CASCADE 
+);
+
+INSERT INTO doctor VALUES(1,'오동익',2);
+INSERT INTO doctor VALUES(2,'민세동',3);
+INSERT INTO doctor(doctor_name,dept_id) VALUES(3,'권춘기',4);
+INSERT INTO doctor VALUES(4,'이언석',5);
+INSERT INTO doctor VALUES(5,'안재억',6);
+INSERT INTO doctor VALUES(6,'박민선',7);

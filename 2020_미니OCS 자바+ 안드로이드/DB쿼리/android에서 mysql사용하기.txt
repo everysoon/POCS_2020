@@ -1,0 +1,23 @@
+<<miniOCS에선 Android 29버전/최소23버전에서 개발 mysql5.6사용 라이브러리 5.1.39사용>>
+
+1. 데이터 베이스 생성
+create database 데이터베이스이름 default charset=utf8;
+-> create database android default charset=utf8;
+2. 새로 생성한 데이터베이스를 사용할 사용자 생성
+ create user 사용자이름 identified by '패스워드';
+-> create user minsun identified by '0610';
+3. 앞에 생성했던 데이터베이스를 새로 생성한 사용자가 사용하도록 권한 부여
+grant all privileges on 데이터베이스이름.* to '사용자이름'@'localhost' identified by '패스워드';
+-> grant all privileges on android.* to 'minsun'@'localhost' identified by '0610';
+4. 콘솔 종료
+flush privileges;   // grant테이블을 reload함으로써 변경 사항을 즉시 반영하도록 한다.
+
+5. C:\ProgramData\MySQL\MySQL Server 5.6 로 이동해서
+my.ini 파일을 열어 bind-address = 자신의 IP주소를 적어준다.
+[Replace xxx.xxx.xxx.xxx with your IP address] 
+
+6. 안드로이드  1) Androidmanifest 파일에 인터넷권한 허용
+                  2) gradle파일에 
+	      3) 'mysql-connector-java-버전.jar' 라이브러리 추가해주기
+ android:userCleartextTraffic="true"
+

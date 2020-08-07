@@ -1,0 +1,12 @@
+CREATE TABLE `patient` (
+`patient_id` INT PRIMARY KEY NOT NULL,
+`patient_name` VARCHAR(10) NOT NULL,
+`patient_sex` CHAR(1) NOT NULL,
+`patient_age` INT NOT NULL,
+`dateOfBirth` VARCHAR(10) NOT NULL
+);
+
+INSERT INTO patient VALUES (1,'홍길동','M',22,'1997-08-31');
+INSERT INTO patient VALUES (2,'박민선','F',24,'1997-06-10');
+INSERT INTO patient VALUES (3,'유하나','F',24,'1997-03-10');
+INSERT INTO patient VALUES (4,'김진선','F',24,'1997-10-01');

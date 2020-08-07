@@ -1,0 +1,12 @@
+CREATE TABLE `laboratory`(
+`lab_id` INT PRIMARY KEY NOT NULL auto_increment,
+`lab_type` VARCHAR(15),
+`lab_area` INT,
+`lab_status` VARCHAR(15),
+`lab_time` VARCHAR(15)
+);
+
+INSERT INTO laboratory VALUES (1,'thorax',1549,'perforation','20-07-29_13:00');
+INSERT INTO laboratory VALUES (2,'tumor',1548,'musculoskeletal','20-07-29_13:00');
+INSERT INTO laboratory VALUES (3,'thorax',1549,'perforation','20-07-29_16:00');
+INSERT INTO laboratory VALUES (4,'tumor',1548,'musculoskeletal','20-07-29_16:00');

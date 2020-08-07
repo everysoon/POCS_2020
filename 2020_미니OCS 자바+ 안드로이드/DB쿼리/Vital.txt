@@ -1,0 +1,8 @@
+CREATE TABLE `vital` (
+`vital_id` INT(5) PRIMARY KEY auto_increment,
+`hr` INT(3) NOT NULL DEFAULT 50,
+`bp` VARCHAR(7) NOT NULL DEFAULT '100/60',
+`bt` DECIMAL(3,1) NOT NULL DEFAULT 36.5,
+`resp` INT(2) DEFAULT 15,
+`when_check` VARCHAR(20) DEFAULT 'hh:mm'
+);

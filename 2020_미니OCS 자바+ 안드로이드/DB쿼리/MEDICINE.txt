@@ -1,0 +1,16 @@
+CREATE TABLE `medicine` (
+`medicine_id` INT auto_increment PRIMARY KEY NOT NULL,
+`classfication` CHAR(2) NOT NULL,
+`medicine_name` VARCHAR(80) NOT NULL DEFAULT 'unspecified',
+`medicine_composition` VARCHAR(150) NOT NULL DEFAULT 'unspecified',
+`medicine_type` VARCHAR(10) NOT NULL DEFAULT 'tablet',
+`stock_count`  INT NOT NULL
+);
+
+INSERT INTO medicine VALUES (1,'PP','카스네텐1질정크림콤비팩','Clotrimazole150mg/15g 외1','pack',20);
+INSERT INTO medicine VALUES (2,'PP','코리단환','Anemarrhena Rhizome102mg 외15','tablet',25);
+INSERT INTO medicine VALUES (3,'PP','선명환','Achyranthes Root6.07mg 외 22','tablet',30);
+INSERT INTO medicine VALUES (4,'PP','한풍분심기음엑스과립','Agastache Herb 0.62g 외 1 20','granule',30);
+INSERT INTO medicine VALUES (5,'PP','해소코푸시럽','Chlorpheniramine Maleate 20mg/100ml 외3','syrup',40);
+INSERT INTO medicine VALUES (6,'IP','아라크톤정50mg','Aclatonium Napadisilate50mg','tablet',75);
+INSERT INTO medicine VALUES (7,'MP','5에이치티피캡슐','5-Hydroxytryptophan 100mg','tablet',11);

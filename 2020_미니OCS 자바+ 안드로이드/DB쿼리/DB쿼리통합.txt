@@ -1,0 +1,126 @@
+CREATE TABLE `patient` (
+`patient_id` INT PRIMARY KEY NOT NULL,
+`patient_name` VARCHAR(10) NOT NULL,
+`patient_sex` CHAR(1) NOT NULL,
+`patient_age` INT NOT NULL,
+`dateOfBirth` VARCHAR(10) NOT NULL
+);
+
+INSERT INTO patient VALUES (1,'홍길동','M',22,'1997-08-31');
+INSERT INTO patient VALUES (2,'박민선','F',24,'1997-06-10');
+INSERT INTO patient VALUES (3,'유하나','F',24,'1997-03-10');
+INSERT INTO patient VALUES (4,'김진선','F',24,'1997-10-01');
+
+CREATE TABLE `department` (
+`dept_id` INT PRIMARY KEY NOT NULL auto_increment,
+`dept_name` VARCHAR(6) NOT NULL,
+`dept_location` INT NOT NULL
+);
+
+INSERT INTO department VALUES(1,'전체',0);
+INSERT INTO department VALUES(2,'내과',1513);
+INSERT INTO department (dept_name, dept_location) VALUES('외과',1512);
+INSERT INTO department (dept_name, dept_location)VALUES('안과',1509);
+INSERT INTO department (dept_name, dept_location)VALUES('소아과',1511);
+INSERT INTO department (dept_name, dept_location)VALUES('이비인후과',1508);
+INSERT INTO department (dept_name, dept_location)VALUES('정형외과',1517);
+
+CREATE TABLE `doctor`(
+`doctor_id` INT PRIMARY KEY auto_increment,
+`doctor_name` VARCHAR(4),
+`dept_id` INT,
+FOREIGN KEY(`dept_id`) REFERENCES department(`dept_id`) 
+ON DELETE CASCADE ON UPDATE CASCADE 
+);
+
+INSERT INTO doctor VALUES(1,'오동익',2);
+INSERT INTO doctor VALUES(2,'민세동',3);
+INSERT INTO doctor(doctor_name,dept_id) VALUES(3,'권춘기',4);
+INSERT INTO doctor VALUES(4,'이언석',5);
+INSERT INTO doctor VALUES(5,'안재억',6);
+INSERT INTO doctor VALUES(6,'박민선',7);
+
+CREATE TABLE `registration` (
+`registration_id` INT PRIMARY KEY NOT NULL auto_increment,
+`patient_id` INT,
+FOREIGN KEY(patient_id) REFERENCES patient(`patient_id`)
+ON DELETE CASCADE ON UPDATE CASCADE ,
+`dept_id` INT, FOREIGN KEY(`dept_id`) REFERENCES department(`dept_id`) 
+ON DELETE CASCADE ON UPDATE CASCADE,
+`diagnosis` VARCHAR(150) DEFAULT 'unspecified',
+`when_registration` VARCHAR(30) DEFAULT 'yy-mm-dd',
+`when_treat` VARCHAR(30) DEFAULT 'hh:mm:ss',
+`status` VARCHAR(150) DEFAULT 'unspecified',
+`doctor_id` INT, FOREIGN KEY(`doctor_id`) REFERENCES doctor(`doctor_id`)
+ON DELETE CASCADE ON UPDATE CASCADE 
+);
+
+INSERT INTO registration VALUES(1,2,2,"역류성 식도염","20-7-29_12:00","20-7-29_13:30","속이 쓰림,토",1);
+INSERT INTO registration VALUES(2,2,2,"위염","20-7-30_12:00","20-7-30_13:30","속이 쓰림,위가 아픔",1);
+INSERT INTO registration VALUES(3,2,2,"장염","20-7-31_12:00","20-7-31_13:30","설사",1);
+
+CREATE TABLE `vital` (
+`vital_id` INT(5) PRIMARY KEY auto_increment,
+`hr` INT(3) NOT NULL DEFAULT 50,
+`bp` VARCHAR(7) NOT NULL DEFAULT '100/60',
+`bt` DECIMAL(3,1) NOT NULL DEFAULT 36.5,
+`resp` INT(2) DEFAULT 15,
+`when_check` VARCHAR(20) DEFAULT 'hh:mm'
+);
+INSERT INTO vital VALUES(1,50,'100/60',36.5,15,'13:00');
+INSERT INTO vital VALUES(2,50,'100/70',36.5,15,'13:10');
+
+CREATE TABLE `vital_registration` (
+`vital_registration_id` INT PRIMARY KEY NOT NULL auto_increment,
+`registration_id` INT,
+FOREIGN KEY(registration_id) REFERENCES registration(registration_id)
+ON DELETE CASCADE ON UPDATE CASCADE,
+`vital_id` INT,  FOREIGN KEY(vital_id) REFERENCES vital(vital_id)
+ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+INSERT INTO vital_registration VALUES (1,1,1);
+
+CREATE TABLE `medicine` (
+`medicine_id` INT auto_increment PRIMARY KEY NOT NULL,
+`classfication` CHAR(2) NOT NULL,
+`medicine_name` VARCHAR(80) NOT NULL DEFAULT 'unspecified',
+`medicine_composition` VARCHAR(150) NOT NULL DEFAULT 'unspecified',
+`medicine_type` VARCHAR(10) NOT NULL DEFAULT 'tablet',
+`stock_count`  INT NOT NULL
+);
+
+INSERT INTO medicine VALUES (1,'PP','카스네텐1질정크림콤비팩','Clotrimazole150mg/15g 외1','pack',20);
+INSERT INTO medicine VALUES (2,'PP','코리단환','Anemarrhena Rhizome102mg 외15','tablet',25);
+INSERT INTO medicine VALUES (3,'PP','선명환','Achyranthes Root6.07mg 외 22','tablet',30);
+INSERT INTO medicine VALUES (4,'PP','한풍분심기음엑스과립','Agastache Herb 0.62g 외 1 20','granule',30);
+INSERT INTO medicine VALUES (5,'PP','해소코푸시럽','Chlorpheniramine Maleate 20mg/100ml 외3','syrup',40);
+INSERT INTO medicine VALUES (6,'IP','아라크톤정50mg','Aclatonium Napadisilate50mg','tablet',75);
+INSERT INTO medicine VALUES (7,'MP','5에이치티피캡슐','5-Hydroxytryptophan 100mg','tablet',11);
+
+CREATE TABLE `medicine_prescription`(
+`medicine_pre_id` INT PRIMARY KEY NOT NULL auto_increment,
+`registration_id` INT,
+FOREIGN KEY(registration_id) REFERENCES registration(registration_id)
+ON DELETE CASCADE ON UPDATE CASCADE,
+`medicine_id` INT, 
+FOREIGN KEY(medicine_id) REFERENCES medicine(medicine_id)
+ON DELETE CASCADE ON UPDATE CASCADE,
+`give_out_status` CHAR(1) DEFAULT 'N',
+`prescription` VARCHAR(15)
+);
+
+INSERT INTO medicine_prescription VALUES (1,1,6,'Y','4T_#2_3day');
+
+CREATE TABLE `laboratory`(
+`lab_id` INT PRIMARY KEY NOT NULL auto_increment,
+`lab_type` VARCHAR(15),
+`lab_area` INT,
+`lab_status` VARCHAR(15),
+`lab_time` VARCHAR(15)
+);
+
+INSERT INTO laboratory VALUES (1,'thorax',1549,'perforation','20-07-29_13:00');
+INSERT INTO laboratory VALUES (2,'tumor',1548,'musculoskeletal','20-07-29_13:00');
+INSERT INTO laboratory VALUES (3,'thorax',1549,'perforation','20-07-29_16:00');
+INSERT INTO laboratory VALUES (4,'tumor',1548,'musculoskeletal','20-07-29_16:00');

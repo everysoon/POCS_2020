@@ -1,0 +1,18 @@
+CREATE TABLE `registration` (
+`registration_id` INT PRIMARY KEY NOT NULL auto_increment,
+`patient_id` INT,
+FOREIGN KEY(patient_id) REFERENCES patient(`patient_id`)
+ON DELETE CASCADE ON UPDATE CASCADE ,
+`dept_id` INT, FOREIGN KEY(`dept_id`) REFERENCES department(`dept_id`) 
+ON DELETE CASCADE ON UPDATE CASCADE,
+`diagnosis` VARCHAR(150) DEFAULT 'unspecified',
+`when_registration` VARCHAR(30) DEFAULT 'yy-mm-dd',
+`when_treat` VARCHAR(30) DEFAULT 'hh:mm:ss',
+`status` VARCHAR(150) DEFAULT 'unspecified',
+`doctor_id` INT, FOREIGN KEY(`doctor_id`) REFERENCES doctor(`doctor_id`)
+ON DELETE CASCADE ON UPDATE CASCADE 
+);
+
+INSERT INTO registration VALUES(1,2,2,"역류성 식도염","20-7-29_12:00","20-7-29_13:30","속이 쓰림,토",1);
+INSERT INTO registration VALUES(2,2,2,"위염","20-7-30_12:00","20-7-30_13:30","속이 쓰림,위가 아픔",1);
+INSERT INTO registration VALUES(3,2,2,"장염","20-7-31_12:00","20-7-31_13:30","설사",1);

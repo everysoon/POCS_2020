@@ -1,0 +1,13 @@
+CREATE TABLE `medicine_prescription`(
+`medicine_pre_id` INT PRIMARY KEY NOT NULL auto_increment,
+`registration_id` INT,
+FOREIGN KEY(registration_id) REFERENCES registration(registration_id)
+ON DELETE CASCADE ON UPDATE CASCADE,
+`medicine_id` INT, 
+FOREIGN KEY(medicine_id) REFERENCES medicine(medicine_id)
+ON DELETE CASCADE ON UPDATE CASCADE,
+`give_out_status` CHAR(1) DEFAULT 'N',
+`prescription` VARCHAR(15)
+);
+
+INSERT INTO medicine_prescription VALUES (1,1,6,'Y','4T_#2_3day');

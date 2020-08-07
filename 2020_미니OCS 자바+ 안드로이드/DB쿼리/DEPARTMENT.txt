@@ -1,0 +1,13 @@
+CREATE TABLE `department` (
+`dept_id` INT(2) PRIMARY KEY NOT NULL auto_increment,
+`dept_name` VARCHAR(6) NOT NULL,
+`dept_location` INT(4) NOT NULL
+);
+
+INSERT INTO department VALUES(1,'전체',0);
+INSERT INTO department VALUES(2,'내과',1513);
+INSERT INTO department (dept_name, dept_location) VALUES('외과',1512);
+INSERT INTO department (dept_name, dept_location)VALUES('안과',1509);
+INSERT INTO department (dept_name, dept_location)VALUES('소아과',1511);
+INSERT INTO department (dept_name, dept_location)VALUES('이비인후과',1508);
+INSERT INTO department (dept_name, dept_location)VALUES('정형외과',1517);
